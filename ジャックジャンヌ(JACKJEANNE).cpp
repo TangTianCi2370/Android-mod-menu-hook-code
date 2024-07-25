@@ -17,7 +17,7 @@ struct My_Patches {
     MemoryPatch unlocked;
 } hexPatches;
 
-bool feature1 = false;
+bool feature2 = false;
 
 #define targetLibName OBFUSCATE("libil2cpp.so")
 
