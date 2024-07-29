@@ -25,17 +25,17 @@ int note;
 bool isopen = false;
 bool isoff = false;
 
-void (*old_onhurt)(void *instance,int a,int b,bool c);
-void onhurt(void *instance,int a,int b,bool c) {
+void (*old_NoteHit)(void *instance,int a,int b,bool c);
+void NoteHit(void *instance,int a,int b,bool c) {
     
     if (instance != NULL && note) {
     
       if (isopen) {
 		  
-      return old_onhurt(instance,note,b,true);  
+      return old_NoteHit(instance,note,b,true);  
 	    }
          }
-		 return old_onhurt(instance,a,b,c);
+		 return old_NoteHit(instance,a,b,c);
         }
      // bool isopen2 = false;
 	
@@ -87,7 +87,7 @@ break;
 					note = 3;   //good
                   break;
                 case 3:
-                money = 4;  // perfect
+                note = 4;  // perfect
 				case 4:
 					note = 5;   //perfectPlus
                   break;
@@ -102,5 +102,5 @@ break;
        
 
 
-HOOK_LIB("libil2cpp.so", "0x18A1C5C", onhurt, old_onhurt);
+HOOK_LIB("libil2cpp.so", "0x18A1C5C", NoteHit, old_NoteHit);
 HOOK_LIB("libil2cpp.so", "0x221C384", piadpack, old_get_piadpack);		
