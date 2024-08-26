@@ -67,5 +67,7 @@ case 2:
 
 
 
-HOOK_LIB("libil2cpp.so", "0x10A4D1C", attack, old_Attack);
-is_player = (int(*)(void *))getAbsoluteAddress(targetLibName, 0x1088E10);
+HOOK_LIB("libil2cpp.so", "0x10A4D1C", attack, old_Attack);  //CountDamageReduceRate
+
+is_player = (int(*)(void *))getAbsoluteAddress(targetLibName, 0x1088E10);	// get_side
+
