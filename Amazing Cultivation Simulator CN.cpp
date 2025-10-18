@@ -28,7 +28,7 @@ const char* GetParamsDesc_Hook(void* instance) {
 
 
 #if defined(__aarch64__) //To compile this code for arm64 lib only. Do not worry about greyed out highlighting code, it still works
-  // Hook GetParamsDesc方法
+  // Hook GetParamsDesc
     uintptr_t GetParamsDesc_addr = getAbsoluteAddress(targetLibName, 0x2f6ac80);
     HOOK_LIB("libil2cpp.so", "0x2f6ac80", GetParamsDesc_Hook, orig_GetParamsDesc);
 
