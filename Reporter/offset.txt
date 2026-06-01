@@ -1,4 +1,4 @@
 public class MonsterAI : MonoBehaviour
-	private void Attack(SensorDataProvider sensorData) { }
+	private void Attack(SensorDataProvider sensorData)
 
 
